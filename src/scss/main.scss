@@ -1,21 +1,23 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+@import "modules/hero.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700&family=Roboto+Mono:wght@400;700&display=swap');
 
+/*RESET-m.korsan idea*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*BODY*/
 body {
-  background: #FFFFFF;
-  color: #234361;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   font-family: 'Nunito', sans-serif;
+  // font-family: 'Roboto Mono', monospace;
 }
 
-.hero__image{
-  width:178px;
-  height: 178px;
-}
