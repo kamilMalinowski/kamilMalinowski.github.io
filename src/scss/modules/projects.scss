@@ -1,12 +1,20 @@
 .projects {
-  padding: 64px 16px 0;
+  padding: 64px 16px 88px;
+  @media (min-width: $desktop) {
+    padding: 64px 16px 176px;
+  }
   &__description {
     font-weight: 300;
     font-size: 16px;
     line-height: 32px;
     text-align: center;
     color: $text;
-    margin: 64px;
+    margin-bottom: 46px;
+    @media (min-width: $desktop) {
+      font-size: 20px;
+      line-height: 40px;
+      margin-bottom: 128px;
+    }
   }
   &__header {
     font-weight: bold;
@@ -14,6 +22,18 @@
     line-height: 48px;
     text-align: center;
     color: $textDark;
+    @media (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+}
+.projects-grid {
+  display: grid;
+  column-gap: 24px;
+  row-gap: 24px;
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -28,6 +48,9 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
+  @media (min-width: $desktop) {
+    font-size: 16px;
+  }
   &__content {
     padding: 24px 16px;
   }
@@ -58,6 +81,9 @@
     font-size: 13px;
     line-height: 24px;
     color: $white;
+    @media (min-width: $desktop) {
+      font-size: 16px;
+    }
   }
   &__window {
     height: 40px;

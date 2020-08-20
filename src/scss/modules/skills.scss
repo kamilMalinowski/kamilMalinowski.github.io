@@ -2,12 +2,24 @@
   background: $darkBlue;
   color: $white;
   padding: 64px 16px 88px;
+  &__content {
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 1184px;
+      margin: 0 auto;
+    }
+  }
   &__header {
     font-weight: bold;
     font-size: 36px;
     line-height: 48px;
     text-align: center;
     color: $white;
+    @media (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 56px;
+    }
   }
 }
 
@@ -31,12 +43,12 @@
       content: "";
       width: 8px;
       height: 8px;
-      background: #e535da;
+      background: $lightBlue;
       .skills-list--full & {
-        background: #302530;
+        background: $darkGray;
       }
       .skills-list--half & {
-        background: #3a3f99;
+        background: $text;
       }
       display: block;
       border-radius: 8px;
@@ -51,6 +63,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 64px;
+
   &__header {
     font-weight: bold;
     font-size: 24px;
@@ -59,7 +72,7 @@
     margin: 16px 0 24px;
   }
   &__picture {
-    width: 72px;
-    height: 72px;
+    width: 90px;
+    height: 90px;
   }
 }
