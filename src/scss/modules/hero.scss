@@ -2,7 +2,7 @@
   padding: 64px 16px 88px;
   &__contact {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 40px;
     color: $white;
     text-decoration: none;
@@ -13,10 +13,7 @@
     text-align: center;
   }
   &__description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+   text-align: center;
   }
   &__header {
     font-weight: bold;
