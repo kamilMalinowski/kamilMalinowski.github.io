@@ -1,3 +1,3 @@
 import '../scss/main.scss';
 
-console.log('HELLO PORTFOLIO')
+console.log("Hi, I'm Kamil - I'm glad you're here :).")

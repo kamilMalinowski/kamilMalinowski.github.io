@@ -65,6 +65,8 @@
   &__hello {
     display: none;
     @media (min-width: $desktop) {
+      opacity: 1;
+      animation: fly 2s linear;
       display: block;
       color: $white;
       background: $darkBlue;

@@ -3,16 +3,17 @@
 @import "_variables";
 
 @import "modules/contact.scss";
+@import "modules/hello.scss";
 @import "modules/hero.scss";
 @import "modules/projects.scss";
 @import "modules/skills.scss";
 
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700&family=Roboto+Mono:wght@400;700&display=swap");
 
 /*RESET-m.korsan idea*/
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -21,8 +22,6 @@ html {
 }
 /*BODY*/
 body {
-  min-height: 100vh;
-  font-family: 'Nunito', sans-serif;
-  // font-family: 'Roboto Mono', monospace;
+  font-family: "Nunito", sans-serif;
+  color: $text;
 }
-
