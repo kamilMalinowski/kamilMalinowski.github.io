@@ -10,7 +10,7 @@ My simple portfolio website.
 - HTML + CSS + JS
 - Github API
 
-## Available scripts
+## AVAILABLE SCRIPTS
 
 `npm run start` - runs development mode
 
