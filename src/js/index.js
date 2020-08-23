@@ -1,15 +1,14 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
-console.log("Hi, I'm Kamil - I'm glad you're here :).")
+console.log("Hi, I'm Kamil - I'm glad you're here :).");
 
 fetch("https://api.github.com/users/kamilMalinowski/repos?sort=created")
   .then((resp) => resp.json())
   .then((resp) => {
     for (let repo of resp) {
       const repositoryList = document.querySelector(".projects-grid--js");
-      const {description, homepage, name, html_url } = repo;
-      const myTemplate = 
-      `
+      const { description, homepage, name, html_url } = repo;
+      const myTemplate = `
       <article class="project">
             <div class="project__window">
               <span class="project__dot"></span>
@@ -56,8 +55,9 @@ fetch("https://api.github.com/users/kamilMalinowski/repos?sort=created")
             </div>
           </article>
       `;
-      if(description){      repositoryList.innerHTML += myTemplate;}
-
+      if (description) {
+        repositoryList.innerHTML += myTemplate;
+      }
     }
   })
   .catch((error) => {
