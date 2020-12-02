@@ -36,6 +36,10 @@
     padding: 0 0 0 24px;
     margin: 0 0 16px;
     position: relative;
+    &--news {
+      color: rgb(255, 193, 77);
+font-weight: 600;
+    }
     &::before {
       position: absolute;
       left: 0;
