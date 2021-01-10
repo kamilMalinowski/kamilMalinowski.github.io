@@ -2,13 +2,14 @@ import "../scss/main.scss";
 
 console.log("Hi, I'm Kamil - I'm glad you're here :).");
 
-fetch("https://api.github.com/users/kamilMalinowski/repos?sort=created")
+fetch("https://api.github.com/users/kamilMalinowski/repos?sort=updated")
   .then((resp) => resp.json())
   .then((resp) => {
     for (let repo of resp) {
       const repositoryList = document.querySelector(".projects-grid--js");
-      const { description, homepage, name, html_url } = repo;
-      const myTemplate = `
+      const { description, homepage, name, html_url, id, updated_at } = repo;
+      if (id !== 288786696) {
+        const myTemplate = `
       <article class="project">
             <div class="project__window">
               <span class="project__dot"></span>
@@ -52,11 +53,17 @@ fetch("https://api.github.com/users/kamilMalinowski/repos?sort=created")
                   ></span
                 >
               </p>
+              <p class="project__grid">
+              <span class="project__label">update at:</span>
+              <span>${updated_at}</span>
+            </p>
             </div>
           </article>
       `;
-      if (description) {
-        repositoryList.innerHTML += myTemplate;
+
+        if (description) {
+          repositoryList.innerHTML += myTemplate;
+        }
       }
     }
   })
